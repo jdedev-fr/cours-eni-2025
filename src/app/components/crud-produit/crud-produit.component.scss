@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: solid black 1px;
+    border-radius: 7px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dispo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.noDispo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}

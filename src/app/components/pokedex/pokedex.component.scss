@@ -1,0 +1,113 @@
+.dessin {
+    position: relative;
+    width: 800px;
+}
+
+.imgFond {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.liste {
+    position: absolute;
+    top: 180px;
+    left: 485px;
+    width: 250px;
+    height: 110px;
+    background-color: rgb(81, 217, 47);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.btnMarche {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.btnDown {
+    position: absolute;
+    top: 422px;
+    left: 547px;
+    width: 35px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.btnUp {
+    position: absolute;
+    top: 422px;
+    left: 510px;
+    width: 35px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.btnValid {
+    position: absolute;
+    top: 394px;
+    left: 600px;
+    width: 60px;
+    height: 15px;
+    background-color: transparent;
+}
+
+.btnCancel {
+    position: absolute;
+    top: 394px;
+    left: 675px;
+    width: 60px;
+    height: 15px;
+    background-color: transparent;
+}
+
+.btnValid2 {
+    position: absolute;
+    top: 427px;
+    left: 110px;
+    width: 60px;
+    height: 15px;
+    background-color: transparent;
+}
+
+.btnCancel2 {
+    position: absolute;
+    top: 427px;
+    left: 190px;
+    width: 60px;
+    height: 15px;
+    background-color: transparent;
+}
+
+.pokeDet {
+    position: absolute;
+    top: 165px;
+    left: 65px;
+    width: 270px;
+    height: 180px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+li {
+    list-style-type: none;
+}
+
+[data-selected=true] {
+    background-color: black;
+    color: rgb(81, 217, 47);
+}
+
+.avatar {
+    height: 50%;
+    object-fit: contain;
+}

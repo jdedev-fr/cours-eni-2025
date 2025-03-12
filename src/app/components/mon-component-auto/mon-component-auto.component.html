@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="nom">
+<p [class]="{'rouge':nom=='Administrateur'}">Bonjour {{nom}} !</p>
+
+@if (condition) {
+<p>Affichage conditionnel</p>
+}
+
+<button (click)="affCache()">afficher/cacher</button>
+<ul>
+    @for (fruit of fruits; track $index) {
+    <li>{{fruit}}</li>
+    }
+</ul>

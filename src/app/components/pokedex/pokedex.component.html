@@ -1,0 +1,24 @@
+<div class="dessin">
+    <img class="imgFond" src="/pokedex.webp" alt="pokedex de Sacha">
+    <div class="liste">
+        <ul>
+            @for (pokemon of pokemons; track $index; let idx = $index) {
+            <li [attr.data-selected]="getValid(idx)" [attr.data-url]="pokemon.url">{{pokemon.name}}</li>
+            }
+        </ul>
+    </div>
+    <div class="pokeDet">
+        @if (pokeSel) {
+        <img [src]="pokeSel.image" [alt]="pokeSel.nom" class="avatar">
+        <h2>{{pokeSel.nom}}</h2>
+        <p>poids : {{pokeSel.poids}}Kg</p>
+        }
+    </div>
+    <div class="btnMarche" (click)="switchState()"></div>
+    <div class="btnDown" (click)="selectDown()"></div>
+    <div class="btnUp" (click)="selectUp()"></div>
+    <div class="btnValid" (click)="validPoke()"></div>
+    <div class="btnCancel" (click)="cancelPoke()"></div>
+    <div class="btnValid2" (click)="validPoke()"></div>
+    <div class="btnCancel2" (click)="cancelPoke()"></div>
+</div>

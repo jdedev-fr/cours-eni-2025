@@ -1,0 +1,22 @@
+<input type="text" placeholder="Entrez le nom du produit" [(ngModel)]="nom"><br>
+<textarea [(ngModel)]="description"></textarea><br>
+<input type="number" [(ngModel)]="prix"><br>
+Produit dispo ? : <input type="checkbox" [(ngModel)]="dispo"><br>
+<button (click)="validForm()">Ajouter</button>
+
+<h2>Liste des produits</h2>
+
+<div class="flex">
+    @for(produit of produits; track $index) {
+    <article class="card">
+        <h3>{{produit.nom}}</h3>
+        <p>{{produit.description}}</p>
+        <div class="ligne">
+            <p>dispo ?</p>
+            <div [class]="{'dispo':produit.dispo,'noDispo':!produit.dispo}"></div>
+
+            <p>{{produit.prix | currency}}</p>
+        </div>
+    </article>
+    }
+</div>

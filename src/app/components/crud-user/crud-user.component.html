@@ -1,0 +1,30 @@
+<input type="text" placeholder="Entrez votre nom" [(ngModel)]="inpNom">
+<input type="text" placeholder="Entrez votre prénom" [(ngModel)]="inpPrenom">
+<button (click)="validForm()">Ajouter/Modifier Utilisateur</button>
+
+
+<h2>Liste des utilisateurs</h2>
+<table border="2">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Outils</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of users; track $index) {
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name | titlecase}}</td>
+            <td>{{user.firstName | titlecase}}</td>
+            <td>
+                <button (click)="navDetail(user)">Detail</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<button (click)="navPokeDex()">Go to pokedex</button>

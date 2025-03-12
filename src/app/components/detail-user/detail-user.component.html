@@ -1,0 +1,10 @@
+@if (user) {
+<h1>{{user.name}}</h1>
+<p>id = {{user.id}}</p>
+<p>prénom : {{user.firstName}}</p>
+}
+@else {
+<p>Utilisateur non trouvé</p>
+}
+
+<a routerLink="/">Retour</a>
