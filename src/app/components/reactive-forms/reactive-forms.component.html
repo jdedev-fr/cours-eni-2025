@@ -1,0 +1,12 @@
+<form [formGroup]="monForm" (submit)="validForm()">
+    <input type="text" placeholder="nom" formControlName="nom">
+    @if(!monForm.get("nom")?.valid) {
+    <p [ngStyle]="{'color':'red'}">Vous devez rentrer au moins 2 lettres</p>
+    }
+
+    <input type="text" placeholder="prenom" formControlName="prenom">
+    @if(!monForm.get("prenom")?.valid) {
+    <p [ngStyle]="{'color':'red'}">Vous devez rentrer au moins 2 lettres</p>
+    }
+    <button>Valider</button>
+</form>
