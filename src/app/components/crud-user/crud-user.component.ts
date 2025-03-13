@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { IUser } from '../../interfaces/iuser';
 import { UsersService } from '../../service/users.service';
 import { Router, RouterLink } from '@angular/router';
+import { InspirationComponent } from "../inspiration/inspiration.component";
 
 
 
 @Component({
   selector: 'app-crud-user',
-  imports: [FormsModule, TitleCasePipe, RouterLink],
+  imports: [FormsModule, TitleCasePipe, RouterLink, InspirationComponent],
   templateUrl: './crud-user.component.html',
   styleUrl: './crud-user.component.scss'
 })

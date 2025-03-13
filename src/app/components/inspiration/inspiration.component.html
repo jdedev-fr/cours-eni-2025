@@ -1,0 +1,21 @@
+@if(errMess){
+<p>Erreur : {{errMess}}</p>
+}
+@else {
+<!-- inspiration : {{inspiration | json}} <br> -->
+@if(inspiration){
+<article>
+    <div>
+        <blockquote>
+            <p>
+                {{inspiration.quote}}
+            </p>
+        </blockquote>
+        <p>— {{inspiration.auteur}} —</p>
+    </div>
+</article>
+}
+@else {
+<p>Pas d'inspiration disponible</p>
+}
+}
